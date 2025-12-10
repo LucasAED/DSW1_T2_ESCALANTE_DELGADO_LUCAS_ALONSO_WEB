@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca Universitaria</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>📚 Sistema de Biblioteca</h1>
+
+        <div class="section">
+            <h2>Gestión de Libros</h2>
+            <div class="form-group">
+                <input type="text" id="bookTitle" placeholder="Título del Libro">
+                <input type="text" id="bookAuthor" placeholder="Autor">
+                <input type="text" id="bookISBN" placeholder="ISBN">
+                <input type="number" id="bookStock" placeholder="Stock" style="width: 80px;">
+                <button onclick="crearLibro()">➕ Registrar Libro</button>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Título</th>
+                        <th>Autor</th>
+                        <th>ISBN</th>
+                        <th>Stock</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="booksTableBody"></tbody>
+            </table>
+        </div>
+
+        <hr>
+
+        <div class="section">
+            <h2>Gestión de Préstamos</h2>
+            <div class="form-group">
+                <select id="bookSelect">
+                    <option value="">Seleccione un Libro...</option>
+                </select>
+                <input type="text" id="studentName" placeholder="Nombre del Estudiante">
+                <button onclick="registrarPrestamo()">Registrar Préstamo</button>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Libro</th>
+                        <th>Estudiante</th>
+                        <th>Fecha Préstamo</th>
+                        <th>Estado</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="loansTableBody"></tbody>
+            </table>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
